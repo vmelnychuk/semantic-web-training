@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:ticket="http://training.org/2014/02/ticket#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:schema="http://schema.org/"
+    xml:base="http://training.org/2014/02/ticket#">
+
+    <rdfs:Class rdf:about="http://training.org/2014/02/ticket#Price">
+        <rdfs:subClassOf rdf:resource="https://schema.org/price"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://training.org/2014/02/ticket#DateTime">
+        <rdfs:subClassOf rdf:resource="https://schema.org/DateTime"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://training.org/2014/02/ticket#BeginDate">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Date"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://training.org/2014/02/ticket#EndDate">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Date"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://training.org/2014/02/ticket#Seat">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Text"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://training.org/2014/02/ticket#Place">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Place"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://training.org/2014/02/ticket#DeparturePoint">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Place"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://training.org/2014/02/ticket#ArrivalPoint">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Place"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://training.org/2014/02/ticket#Winnings">
+        <rdfs:subClassOf rdf:resource="https://schema.org/price"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://training.org/2014/02/ticket#GenericTicket" />
+
+    <rdf:Property rdf:about="http://training.org/2014/02/ticket#hasPrice">
+        <rdfs:label xml:lang="en">Price</rdfs:label>
+        <rdfs:domain rdf:resource="http://training.org/2014/02/ticket#GenericTicket" />
+        <rdfs:range rdf:resource="http://training.org/2014/02/ticket#Price" />
+    </rdf:Property>
+
+    <rdfs:Class rdf:about="http://training.org/2014/02/ticket#SingleTicket">
+        <rdfs:subClassOf rdf:resource="http://training.org/2014/02/ticket#GenericTicket" />
+    </rdfs:Class>
+
+    <rdf:Property rdf:about="http://training.org/2014/02/ticket#hasDate">
+        <rdfs:label xml:lang="en">Date</rdfs:label>
+        <rdfs:domain rdf:resource="http://training.org/2014/02/ticket#SingleTicket" />
+        <rdfs:range rdf:resource="http://training.org/2014/02/ticket#DateTime" />
+    </rdf:Property>
+
+    <rdfs:Class rdf:about="http://training.org/2014/02/ticket#SeasonTicket">
+        <rdfs:subClassOf rdf:resource="http://training.org/2014/02/ticket#GenericTicket" />
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://training.org/2014/02/ticket#TransportSingleTicket">
+        <rdfs:subClassOf rdf:resource="http://training.org/2014/02/ticket#SingleTicket" />
+    </rdfs:Class>
+
+    <rdf:Property rdf:about="http://training.org/2014/02/ticket#hasBeginDate">
+        <rdfs:label xml:lang="en">Begin Date</rdfs:label>
+        <rdfs:domain rdf:resource="http://training.org/2014/02/ticket#SeasonTicket" />
+        <rdfs:range rdf:resource="http://training.org/2014/02/ticket#BeginDate" />
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://training.org/2014/02/ticket#hasEndDate">
+        <rdfs:label xml:lang="en">End Date</rdfs:label>
+        <rdfs:domain rdf:resource="http://training.org/2014/02/ticket#SeasonTicket" />
+        <rdfs:range rdf:resource="http://training.org/2014/02/ticket#hasEndDate" />
+    </rdf:Property>
+
+    <rdfs:Class rdf:about="http://training.org/2014/02/ticket#EventSingleTicket">
+        <rdfs:subClassOf rdf:resource="http://training.org/2014/02/ticket#SingleTicket" />
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://training.org/2014/02/ticket#TrainSingleTicket">
+        <rdfs:subClassOf rdf:resource="http://training.org/2014/02/ticket#TransportSingleTicket" />
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://training.org/2014/02/ticket#AirplaneSingleTicket">
+        <rdfs:subClassOf rdf:resource="http://training.org/2014/02/ticket#TransportSingleTicket" />
+    </rdfs:Class>
+
+    <rdf:Property rdf:about="http://training.org/2014/02/ticket#hasDeparturePoint">
+        <rdfs:label xml:lang="en">Departure Point</rdfs:label>
+        <rdfs:domain rdf:resource="http://training.org/2014/02/ticket#TrainSingleTicket" />
+        <rdfs:domain rdf:resource="http://training.org/2014/02/ticket#AirplaneSingleTicket" />
+        <rdfs:range rdf:resource="http://training.org/2014/02/ticket#DeparturePoint" />
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://training.org/2014/02/ticket#hasArrivalPoint">
+        <rdfs:label xml:lang="en">Arrival Point</rdfs:label>
+        <rdfs:domain rdf:resource="http://training.org/2014/02/ticket#TrainSingleTicket" />
+        <rdfs:domain rdf:resource="http://training.org/2014/02/ticket#AirplaneSingleTicket" />
+        <rdfs:range rdf:resource="http://training.org/2014/02/ticket#ArrivalPoint" />
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://training.org/2014/02/ticket#hasSeat">
+        <rdfs:label xml:lang="en">Seat</rdfs:label>
+        <rdfs:domain rdf:resource="http://training.org/2014/02/ticket#TrainSingleTicket" />
+        <rdfs:domain rdf:resource="http://training.org/2014/02/ticket#AirplaneSingleTicket" />
+        <rdfs:range rdf:resource="http://training.org/2014/02/ticket#Seat" />
+    </rdf:Property>
+
+    <rdfs:Class rdf:about="http://training.org/2014/02/ticket#ConcertSingleTicket">
+        <rdfs:subClassOf rdf:resource="http://training.org/2014/02/ticket#EventSingleTicket" />
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://training.org/2014/02/ticket#FilmSingleTicket">
+        <rdfs:subClassOf rdf:resource="http://training.org/2014/02/ticket#EventSingleTicket" />
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://training.org/2014/02/ticket#PlaySingleTicket">
+        <rdfs:subClassOf rdf:resource="http://training.org/2014/02/ticket#EventSingleTicket" />
+    </rdfs:Class>
+
+    <rdf:Property rdf:about="http://training.org/2014/02/ticket#hasPlace">
+        <rdfs:label xml:lang="en">Place</rdfs:label>
+        <rdfs:domain rdf:resource="http://training.org/2014/02/ticket#ConcertSingleTicket" />
+        <rdfs:domain rdf:resource="http://training.org/2014/02/ticket#FilmSingleTicket" />
+        <rdfs:domain rdf:resource="http://training.org/2014/02/ticket#PlaySingleTicket" />
+        <rdfs:domain rdf:resource="http://training.org/2014/02/ticket#Filmfestival" />
+        <rdfs:range rdf:resource="http://training.org/2014/02/ticket#Place" />
+    </rdf:Property>
+
+    <rdfs:Class rdf:about="http://training.org/2014/02/ticket#LotterySingleTicket">
+        <rdfs:subClassOf rdf:resource="http://training.org/2014/02/ticket#EventSingleTicket" />
+    </rdfs:Class>
+
+    <rdf:Property rdf:about="http://training.org/2014/02/ticket#hasWinnings">
+        <rdfs:label xml:lang="en">Winnings</rdfs:label>
+        <rdfs:domain rdf:resource="http://training.org/2014/02/ticket#LotterySingleTicket" />
+        <rdfs:range rdf:resource="http://training.org/2014/02/ticket#Winnings" />
+    </rdf:Property>
+
+    <rdfs:Class rdf:about="http://training.org/2014/02/ticket#TransportSeasonTicket">
+        <rdfs:subClassOf rdf:resource="http://training.org/2014/02/ticket#SeasonTicket" />
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://training.org/2014/02/ticket#BusSeasonTicket">
+        <rdfs:subClassOf rdf:resource="http://training.org/2014/02/ticket#TransportSeasonTicket" />
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://training.org/2014/02/ticket#TrolleybusSeasonTicket">
+        <rdfs:subClassOf rdf:resource="http://training.org/2014/02/ticket#TransportSeasonTicket" />
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://training.org/2014/02/ticket#EventSeasonTicket">
+        <rdfs:subClassOf rdf:resource="http://training.org/2014/02/ticket#SeasonTicket" />
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://training.org/2014/02/ticket#Filmfestival">
+        <rdfs:subClassOf rdf:resource="http://training.org/2014/02/ticket#EventSeasonTicket" />
+    </rdfs:Class>
+</rdf:RDF>
