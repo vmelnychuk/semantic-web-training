@@ -6,11 +6,10 @@
 
 	<owl:Ontology rdf:about="http://training.org/2014/02/ticket#tickets">
 		<owl:versionInfo>Version 1.0.1</owl:versionInfo>
-		<rdf:commnet xml:lang="en">
+		<rdfs:comment xml:lang="en">
 			Ticket Scheme Ontology
-		</rdf:commnet>
+		</rdfs:comment>
 	</owl:Ontology>
-
 
 	<owl:Class rdf:about="http://training.org/2014/02/ticket#Price">
 	</owl:Class>
@@ -21,77 +20,128 @@
 
 	<!-- Base ticket class -->
 	<owl:Class rdf:about="http://training.org/2014/02/ticket#GenericTicket">
+		<rdfs:label>The Ticket type</rdfs:label>
+		<rdfs:comment xml:lang="en">The base class for all tickets
+		</rdfs:comment>
 	</owl:Class>
 
 	<!-- first sub-classes -->
 	<owl:Class rdf:about="http://training.org/2014/02/ticket#SingleTicket">
+		<rdfs:label>Single Ticket</rdfs:label>
+		<rdfs:comment xml:lang="en">Ticket for just one usage
+		</rdfs:comment>
 		<rdfs:subClassOf rdf:resource="http://training.org/2014/02/ticket#GenericTicket" />
 	</owl:Class>
 
 	<owl:Class rdf:about="http://training.org/2014/02/ticket#SeasonTicket">
+		<rdfs:label>Season Ticket</rdfs:label>
+		<rdfs:comment xml:lang="en">Ticket for several times usage
+		</rdfs:comment>
 		<rdfs:subClassOf rdf:resource="http://training.org/2014/02/ticket#GenericTicket" />
 	</owl:Class>
 
 	<!-- second sub-classes -->
 	<owl:Class rdf:about="http://training.org/2014/02/ticket#TransportSingleTicket">
+		<rdfs:label>Single Transport Ticket</rdfs:label>
+		<rdfs:comment xml:lang="en">Ticket for one transport trip
+		</rdfs:comment>
 		<rdfs:subClassOf rdf:resource="http://training.org/2014/02/ticket#SingleTicket" />
 	</owl:Class>
 
 	<owl:Class rdf:about="http://training.org/2014/02/ticket#EventSingleTicket">
+		<rdfs:label>Single Event Ticket</rdfs:label>
+		<rdfs:comment xml:lang="en">Ticket for one event
+		</rdfs:comment>
 		<rdfs:subClassOf rdf:resource="http://training.org/2014/02/ticket#SingleTicket" />
 	</owl:Class>
 
 	<owl:Class rdf:about="http://training.org/2014/02/ticket#TransportSeasonTicket">
+		<rdfs:label>Season Transport Ticket</rdfs:label>
+		<rdfs:comment xml:lang="en">Ticket for several transport trips
+		</rdfs:comment>
 		<rdfs:subClassOf rdf:resource="http://training.org/2014/02/ticket#SeasonTicket" />
 	</owl:Class>
 
 	<owl:Class rdf:about="http://training.org/2014/02/ticket#EventSeasonTicket">
+		<rdfs:label>Season Event Ticket</rdfs:label>
+		<rdfs:comment xml:lang="en">Ticket for several events
+		</rdfs:comment>
 		<rdfs:subClassOf rdf:resource="http://training.org/2014/02/ticket#SeasonTicket" />
 	</owl:Class>
 
 	<!-- third sub-classes -->
 
 	<owl:Class rdf:about="http://training.org/2014/02/ticket#TrainSingleTicket">
+		<rdfs:label>Single Train Ticket</rdfs:label>
+		<rdfs:comment xml:lang="en">Ticket for one train trip
+		</rdfs:comment>
 		<rdfs:subClassOf
 			rdf:resource="http://training.org/2014/02/ticket#TransportSingleTicket" />
 	</owl:Class>
 
 	<owl:Class rdf:about="http://training.org/2014/02/ticket#AirplaneSingleTicket">
+		<rdfs:label>Single Airplane Ticket</rdfs:label>
+		<rdfs:comment xml:lang="en">Ticket for one airplane trip
+		</rdfs:comment>
 		<rdfs:subClassOf
 			rdf:resource="http://training.org/2014/02/ticket#TransportSingleTicket" />
 	</owl:Class>
 
 	<owl:Class rdf:about="http://training.org/2014/02/ticket#ConcertSingleTicket">
+		<rdfs:label>Single Concert Ticket</rdfs:label>
+		<rdfs:comment xml:lang="en">Ticket for one concert
+		</rdfs:comment>
 		<rdfs:subClassOf
 			rdf:resource="http://training.org/2014/02/ticket#EventSingleTicket" />
 	</owl:Class>
 
 	<owl:Class rdf:about="http://training.org/2014/02/ticket#FilmSingleTicket">
+		<rdfs:label>Single Film Ticket</rdfs:label>
+		<rdfs:comment xml:lang="en">Ticket for one film
+		</rdfs:comment>
 		<rdfs:subClassOf
 			rdf:resource="http://training.org/2014/02/ticket#EventSingleTicket" />
 	</owl:Class>
 
 	<owl:Class rdf:about="http://training.org/2014/02/ticket#PlaySingleTicket">
+		<rdfs:label>Single Play Ticket</rdfs:label>
+		<rdfs:comment xml:lang="en">Ticket for one play
+		</rdfs:comment>
 		<rdfs:subClassOf
 			rdf:resource="http://training.org/2014/02/ticket#EventSingleTicket" />
 	</owl:Class>
 
 	<owl:Class rdf:about="http://training.org/2014/02/ticket#LotterySingleTicket">
+		<rdfs:label>Single Lottery Ticket</rdfs:label>
+		<rdfs:comment xml:lang="en">Ticket for one lottery
+		</rdfs:comment>
 		<rdfs:subClassOf
 			rdf:resource="http://training.org/2014/02/ticket#EventSingleTicket" />
 	</owl:Class>
 
 	<owl:Class rdf:about="http://training.org/2014/02/ticket#BusSeasonTicket">
+		<rdfs:label>Season Bus Ticket</rdfs:label>
+		<rdfs:comment xml:lang="en">Ticket for several bus trips
+		</rdfs:comment>
 		<rdfs:subClassOf
 			rdf:resource="http://training.org/2014/02/ticket#TransportSeasonTicket" />
 	</owl:Class>
-	
+
 	<owl:Class rdf:about="http://training.org/2014/02/ticket#TrolleybusSeasonTicket">
-        <rdfs:subClassOf rdf:resource="http://training.org/2014/02/ticket#TransportSeasonTicket" />
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://training.org/2014/02/ticket#Filmfestival">
-        <rdfs:subClassOf rdf:resource="http://training.org/2014/02/ticket#EventSeasonTicket" />
-    </owl:Class>
+		<rdfs:label>Season Trollleybus Ticket</rdfs:label>
+		<rdfs:comment xml:lang="en">Ticket for several trolleybus
+			trips
+		</rdfs:comment>
+		<rdfs:subClassOf
+			rdf:resource="http://training.org/2014/02/ticket#TransportSeasonTicket" />
+	</owl:Class>
+
+	<owl:Class rdf:about="http://training.org/2014/02/ticket#Filmfestival">
+		<rdfs:label>Season Filmfestival Ticket</rdfs:label>
+		<rdfs:comment xml:lang="en">Ticket for films
+		</rdfs:comment>
+		<rdfs:subClassOf
+			rdf:resource="http://training.org/2014/02/ticket#EventSeasonTicket" />
+	</owl:Class>
 
 </rdf:RDF>
