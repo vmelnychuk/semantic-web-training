@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:feature="http://training.org/clothes/features">
+    <rdf:Description rdf:about="http://training.org/clothes/t-short">
+       <feature:size>20</feature:size>
+       <feature:color rdf:resourse="http://training.org/clothes/color#white" />
+    </rdf:Description>
+</rdf:RDF>
