@@ -225,7 +225,7 @@
 			rdf:resource="http://training.org/2014/02/ticket#TransportSeasonTicket" />
 	</owl:Class>
 
-	<owl:Class rdf:about="http://training.org/2014/02/ticket#Filmfestival">
+	<owl:Class rdf:about="http://training.org/2014/02/ticket#FilmfestivalTicket">
 		<rdfs:label>Season Film festival Ticket</rdfs:label>
 		<rdfs:comment xml:lang="en">Ticket for films
 		</rdfs:comment>

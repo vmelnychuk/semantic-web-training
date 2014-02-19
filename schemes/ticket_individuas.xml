@@ -3,8 +3,318 @@
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:schema="http://schema.org/"
 	xmlns:ticket="http://training.org/2014/02/ticket#" xml:base="http://training.org/2014/02/ticket#">
-	
-	<rdf:Description rdf:about="http://training.org/2014/02/ticket#JanuaryTrolleybusTicket">
+
+	<!-- Transport season tickets -->
+	<rdf:Description
+		rdf:about="http://training.org/2014/02/ticket#JanuaryTrolleybusTicket">
 		<rdf:type rdf:resource="http://training.org/2014/02/ticket#TrolleybusSeasonTicket" />
+		<rdfs:label xml:lang="en">January Trolleybus Ticket</rdfs:label>
+		<ticket:hasPrice>
+			<rdf:Description
+				rdf:about="http://training.org/2014/02/ticket#JanuaryTrolleybusTicketPrice">
+				<ticket:hasPriceValue>165.00</ticket:hasPriceValue>
+			</rdf:Description>
+		</ticket:hasPrice>
+		<ticket:hasBeginDate>
+			<rdf:Description
+				rdf:about="http://training.org/2014/02/ticket#JanuaryTrolleybusTicketStartDate">
+				<ticket:hasDateValue>
+					2014-01-01
+				</ticket:hasDateValue>
+			</rdf:Description>
+		</ticket:hasBeginDate>
+		<ticket:hasEndDate>
+			<rdf:Description
+				rdf:about="http://training.org/2014/02/ticket#JanuaryTrolleybusTicketEndDate">
+				<ticket:hasDateValue>
+					2014-01-31
+				</ticket:hasDateValue>
+			</rdf:Description>
+		</ticket:hasEndDate>
 	</rdf:Description>
+
+	<rdf:Description
+		rdf:about="http://training.org/2014/02/ticket#FebruaryTrolleybusTicket">
+		<rdf:type rdf:resource="http://training.org/2014/02/ticket#TrolleybusSeasonTicket" />
+		<rdfs:label xml:lang="en">February Trolleybus Ticket
+		</rdfs:label>
+		<ticket:hasPrice>
+			<rdf:Description
+				rdf:about="http://training.org/2014/02/ticket#FebruaryTrolleybusTicketPrice">
+				<ticket:hasPriceValue>175.00</ticket:hasPriceValue>
+			</rdf:Description>
+		</ticket:hasPrice>
+		<ticket:hasBeginDate>
+			<rdf:Description
+				rdf:about="http://training.org/2014/02/ticket#FebruaryTrolleybusTicketStartDate">
+				<ticket:hasDateValue>
+					2014-02-01
+				</ticket:hasDateValue>
+			</rdf:Description>
+		</ticket:hasBeginDate>
+		<ticket:hasEndDate>
+			<rdf:Description
+				rdf:about="http://training.org/2014/02/ticket#FebruaryTrolleybusTicketEndDate">
+				<ticket:hasDateValue>
+					2014-02-28
+				</ticket:hasDateValue>
+			</rdf:Description>
+		</ticket:hasEndDate>
+	</rdf:Description>
+
+
+	<rdf:Description rdf:about="http://training.org/2014/02/ticket#JanuaryBusTicket">
+		<rdf:type rdf:resource="http://training.org/2014/02/ticket#BusSeasonTicket" />
+		<rdfs:label xml:lang="en">January Bus Ticket</rdfs:label>
+		<ticket:hasPrice>
+			<rdf:Description
+				rdf:about="http://training.org/2014/02/ticket#JanuaryBusTicketPrice">
+				<ticket:hasPriceValue>104.00</ticket:hasPriceValue>
+			</rdf:Description>
+		</ticket:hasPrice>
+		<ticket:hasBeginDate>
+			<rdf:Description
+				rdf:about="http://training.org/2014/02/ticket#JanuaryBusTicketStartDate">
+				<ticket:hasDateValue>
+					2014-01-01
+				</ticket:hasDateValue>
+			</rdf:Description>
+		</ticket:hasBeginDate>
+		<ticket:hasEndDate>
+			<rdf:Description
+				rdf:about="http://training.org/2014/02/ticket#JanuaryBusTicketEndDate">
+				<ticket:hasDateValue>
+					2014-01-31
+				</ticket:hasDateValue>
+			</rdf:Description>
+		</ticket:hasEndDate>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://training.org/2014/02/ticket#FebruaryBusTicket">
+		<rdf:type rdf:resource="http://training.org/2014/02/ticket#BusSeasonTicket" />
+		<rdfs:label xml:lang="en">February Bus Ticket</rdfs:label>
+		<ticket:hasPrice>
+			<rdf:Description
+				rdf:about="http://training.org/2014/02/ticket#FebruaryBusTicketPrice">
+				<ticket:hasPriceValue>106.00</ticket:hasPriceValue>
+			</rdf:Description>
+		</ticket:hasPrice>
+		<ticket:hasBeginDate>
+			<rdf:Description
+				rdf:about="http://training.org/2014/02/ticket#FebruaryBusTicketStartDate">
+				<ticket:hasDateValue>
+					2014-02-01
+				</ticket:hasDateValue>
+			</rdf:Description>
+		</ticket:hasBeginDate>
+		<ticket:hasEndDate>
+			<rdf:Description
+				rdf:about="http://training.org/2014/02/ticket#FebruaryBusTicketEndDate">
+				<ticket:hasDateValue>
+					2014-02-28
+				</ticket:hasDateValue>
+			</rdf:Description>
+		</ticket:hasEndDate>
+	</rdf:Description>
+
+	<rdf:Description
+		rdf:about="http://training.org/2014/02/ticket#FebruaryUndergroundTicket">
+		<rdf:type rdf:resource="http://training.org/2014/02/ticket#UndergroundSeasonTicket" />
+		<rdfs:label xml:lang="en">February Underground Ticket
+		</rdfs:label>
+		<ticket:hasPrice>
+			<rdf:Description
+				rdf:about="http://training.org/2014/02/ticket#FebruaryUndergroundTicket">
+				<ticket:hasPriceValue>120.00</ticket:hasPriceValue>
+			</rdf:Description>
+		</ticket:hasPrice>
+		<ticket:hasBeginDate>
+			<rdf:Description
+				rdf:about="http://training.org/2014/02/ticket#FebruaryUndergroundTicketStartDate">
+				<ticket:hasDateValue>
+					2014-02-01
+				</ticket:hasDateValue>
+			</rdf:Description>
+		</ticket:hasBeginDate>
+		<ticket:hasEndDate>
+			<rdf:Description
+				rdf:about="http://training.org/2014/02/ticket#FebruaryUndergroundTicketEndDate">
+				<ticket:hasDateValue>
+					2014-02-28
+				</ticket:hasDateValue>
+			</rdf:Description>
+		</ticket:hasEndDate>
+	</rdf:Description>
+
+
+
+	<!-- Filmfest season tickets -->
+	<rdf:Description
+		rdf:about="http://training.org/2014/02/ticket#SpringFilmfestivalTicket">
+		<rdf:type rdf:resource="http://training.org/2014/02/ticket#FilmfestivalTicket" />
+		<rdfs:label xml:lang="en">Spring Film festival Ticket
+		</rdfs:label>
+		<ticket:hasPrice>
+			<rdf:Description
+				rdf:about="http://training.org/2014/02/ticket#SpringFilmfestivalTicketPrice">
+				<ticket:hasPriceValue>1003.00</ticket:hasPriceValue>
+			</rdf:Description>
+		</ticket:hasPrice>
+		<ticket:hasBeginDate>
+			<rdf:Description
+				rdf:about="http://training.org/2014/02/ticket#SpringFilmfestivalTicketStartDate">
+				<ticket:hasDateValue>
+					2014-03-01
+				</ticket:hasDateValue>
+			</rdf:Description>
+		</ticket:hasBeginDate>
+		<ticket:hasEndDate>
+			<rdf:Description
+				rdf:about="http://training.org/2014/02/ticket#SpringFilmfestivalTicketEndDate">
+				<ticket:hasDateValue>
+					2014-05-31
+				</ticket:hasDateValue>
+			</rdf:Description>
+		</ticket:hasEndDate>
+	</rdf:Description>
+	<!-- Lottery Tickets -->
+	<rdf:Description
+		rdf:about="http://training.org/2014/02/ticket#NextWeekLotteryTicket">
+		<rdf:type rdf:resource="http://training.org/2014/02/ticket#LotterySingleTicket" />
+		<rdfs:label xml:lang="en">Next Week Lottery Ticket
+		</rdfs:label>
+		<ticket:hasPrice>
+			<rdf:Description
+				rdf:about="http://training.org/2014/02/ticket#NextWeekLotteryTicketPrice">
+				<ticket:hasPriceValue>10.00</ticket:hasPriceValue>
+			</rdf:Description>
+		</ticket:hasPrice>
+		<ticket:hasDateTime>
+			<rdf:Description
+				rdf:about="http://training.org/2014/02/ticket#NextWeekLotteryTicketDateTime">
+				<ticket:hasDateTimeValue>
+					2014-02-26T12:00:00
+				</ticket:hasDateTimeValue>
+			</rdf:Description>
+		</ticket:hasDateTime>
+	</rdf:Description>
+	<!-- Consert Ticket -->
+	<rdf:Description
+		rdf:about="http://training.org/2014/02/ticket#TheProdigyConcertSingleTicket">
+		<rdf:type rdf:resource="http://training.org/2014/02/ticket#ConcertSingleTicket" />
+		<rdfs:label xml:lang="en">The Prodigy Concert Ticket
+		</rdfs:label>
+		<ticket:hasPrice>
+			<rdf:Description
+				rdf:about="http://training.org/2014/02/ticket#TheProdigyConcertSingleTicketPrice">
+				<ticket:hasPriceValue>300.00</ticket:hasPriceValue>
+			</rdf:Description>
+		</ticket:hasPrice>
+		<ticket:hasDateTime>
+			<rdf:Description
+				rdf:about="http://training.org/2014/02/ticket#TheProdigyConcertSingleTicketDateTime">
+				<ticket:hasDateTimeValue>
+					2014-04-25T19:00:00
+				</ticket:hasDateTimeValue>
+			</rdf:Description>
+		</ticket:hasDateTime>
+		<ticket:hasPlace>
+			<rdf:Description
+				rdf:about="http://training.org/2014/02/ticket#TheProdigyConcertPlace">
+				<ticket:Location>
+					<rdf:Description
+						rdf:about="http://training.org/2014/02/ticket#TheProdigyConcertLocation">
+						<ticket:hasLocationValue>
+							Minsk, Dinamo stadium
+						</ticket:hasLocationValue>
+					</rdf:Description>
+				</ticket:Location>
+			</rdf:Description>
+		</ticket:hasPlace>
+	</rdf:Description>
+
+	<!-- Film Ticket -->
+	<rdf:Description
+		rdf:about="http://training.org/2014/02/ticket#ZombieMassacreFilmTicket">
+		<rdf:type rdf:resource="http://training.org/2014/02/ticket#FilmSingleTicket" />
+		<rdfs:label xml:lang="en">Zombie Massacre Film Ticket
+		</rdfs:label>
+		<ticket:hasPrice>
+			<rdf:Description
+				rdf:about="http://training.org/2014/02/ticket#ZombieMassacreFilmTicketPrice">
+				<ticket:hasPriceValue>190.00</ticket:hasPriceValue>
+			</rdf:Description>
+		</ticket:hasPrice>
+		<ticket:hasDateTime>
+			<rdf:Description
+				rdf:about="http://training.org/2014/02/ticket#ZombieMassacreFilmTicketDateTime">
+				<ticket:hasDateTimeValue>
+					2014-02-23T18:00:00
+				</ticket:hasDateTimeValue>
+			</rdf:Description>
+		</ticket:hasDateTime>
+		<ticket:hasPlace>
+			<rdf:Description
+				rdf:about="http://training.org/2014/02/ticket#ZombieMassacreFilmPlace">
+				<ticket:Location>
+					<rdf:Description
+						rdf:about="http://training.org/2014/02/ticket#ZombieMassacreFilmLocation">
+						<ticket:hasLocationValue>
+							Gomel, October Cinema
+						</ticket:hasLocationValue>
+					</rdf:Description>
+				</ticket:Location>
+			</rdf:Description>
+		</ticket:hasPlace>
+	</rdf:Description>
+
+	<!-- Train tickets -->
+	<rdf:Description
+		rdf:about="http://training.org/2014/02/ticket#GomelMoscowTrainTicket">
+		<rdf:type rdf:resource="http://training.org/2014/02/ticket#TrainSingleTicket" />
+		<rdfs:label xml:lang="en">Gomel Moscow train
+		</rdfs:label>
+		<ticket:hasPrice>
+			<rdf:Description
+				rdf:about="http://training.org/2014/02/ticket#GomelMoscowTrainTicketPrice">
+				<ticket:hasPriceValue>200.00</ticket:hasPriceValue>
+			</rdf:Description>
+		</ticket:hasPrice>
+		<ticket:hasDateTime>
+			<rdf:Description
+				rdf:about="http://training.org/2014/02/ticket#ZombieMassacreFilmTicketDateTime">
+				<ticket:hasDateTimeValue>
+					2014-03-08T17:00:00
+				</ticket:hasDateTimeValue>
+			</rdf:Description>
+		</ticket:hasDateTime>
+		<ticket:hasDeparturePoint>
+			<rdf:Description
+				rdf:about="http://training.org/2014/02/ticket#GomelMoscowTrainDeparturePoint">
+				<ticket:Location>
+					<rdf:Description
+						rdf:about="http://training.org/2014/02/ticket#GomelMoscowTrainDeparturePointLocation">
+						<ticket:hasLocationValue>
+							Gomel, Railway Station
+						</ticket:hasLocationValue>
+					</rdf:Description>
+				</ticket:Location>
+			</rdf:Description>
+		</ticket:hasDeparturePoint>
+		<ticket:hasArrivalPoint>
+			<rdf:Description
+				rdf:about="http://training.org/2014/02/ticket#GomelMoscowTrainArrivalPoint">
+				<ticket:Location>
+					<rdf:Description
+						rdf:about="http://training.org/2014/02/ticket#GomelMoscowTrainArrivalPointLocation">
+						<ticket:hasLocationValue>
+							Moscow, Railway Station
+						</ticket:hasLocationValue>
+					</rdf:Description>
+				</ticket:Location>
+			</rdf:Description>
+		</ticket:hasArrivalPoint>
+		<ticket:hasSeat>22</ticket:hasSeat>
+	</rdf:Description>
+
 </rdf:RDF>
