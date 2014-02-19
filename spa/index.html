@@ -12,17 +12,20 @@
 <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
-	<script type="text/javascript">
-		get_first_ticket_subclass();
-	</script>
 	<div id="spa">
-		<table id="results">
+		<table id="results-table">
 			<tr>
-				<td>S</td>
-				<td>P</td>
-				<td>O</td>
+				<td>Results</td>
 			</tr>
 		</table>
+		<button onclick="get_ticket_subclass()">Make Query</button>
+		<button onclick="bulid_results_table()">Get tickets</button>
 	</div>
+	<script type="text/javascript">
+      $( "#spa" ).on( "click", "a", function( event ) {
+    	    event.preventDefault();
+    	    change_sub_class($( this ).attr('href'));
+    	});
+	</script>
 </body>
 </html>
