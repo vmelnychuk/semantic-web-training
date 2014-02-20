@@ -16,6 +16,16 @@ body {
 	background-color: #fff;
 }
 
-#results {
-	margin: 0 auto;
+#wrapper {
+	margin: 10px 20px;
+}
+
+#left-column {
+	float: left;
+	width: 300px;
+}
+
+
+#right-column {
+	margin-left: 250px;
 }

@@ -13,19 +13,36 @@
 </head>
 <body>
 	<div id="spa">
-		<table id="results-table">
-			<tr>
-				<td>Results</td>
-			</tr>
-		</table>
-		<button onclick="get_ticket_subclass()">Make Query</button>
-		<button onclick="bulid_results_table()">Get tickets</button>
+		<div id="wrapper">
+			<div id="left-column">
+				<table id="ticket-table">
+					<tr>
+						<td>Tickets</td>
+					</tr>
+				</table>
+				<button onclick="get_all_classes()">Get tickets classes</button>
+			</div>
+			<div id="right-column">
+				<table id="property-table">
+					<tr>
+						<td>Properties</td>
+					</tr>
+				</table>
+				<button onclick="search_for_ticket()">Search</button>
+			</div>
+		</div>
 	</div>
 	<script type="text/javascript">
-      $( "#spa" ).on( "click", "a", function( event ) {
-    	    event.preventDefault();
-    	    change_sub_class($( this ).attr('href'));
-    	});
+		$("#left-column").on("click", "a", function(event) {
+			event.preventDefault();
+			change_sub_class($(this).attr('href'));
+			get_all_properties();
+		});
+		$("#right-column").on("click", "a", function(event) {
+            event.preventDefault();
+            /* change_sub_class($(this).attr('href'));
+            get_all_properties(); */
+        });
 	</script>
 </body>
 </html>
